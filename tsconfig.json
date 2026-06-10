@@ -3,13 +3,13 @@
   "compilerOptions": {
     "allowUnreachableCode": true,
     "ignoreDeprecations": "5.0",
-    "lib": ["es5"],
+    "lib": ["es2022"],
     "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "Project",
     "sourceMap": false,
     "strict": false,
-    "target": "es5"
+    "target": "es2022"
   },
   "include": ["src/*.ts", "types/*.d.ts"]
 }
