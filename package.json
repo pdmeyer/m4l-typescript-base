@@ -3,7 +3,8 @@
   "scripts": {
     "build": "yarn tsc",
     "dev": "yarn install --frozen-lockfile && yarn tsc --watch",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "coverage": "type-coverage --strict --detail"
   },
   "devDependencies": {
    "@tsconfig/recommended": "^1.0.7",
@@ -14,6 +15,7 @@
     "prettier": "^3.1.0",
     "prettier-eslint": "^16.1.2",
     "typescript": "^4.4.4",
-    "typedoc": "^0.28.19"
+    "type-coverage": "^2.29.7",
+    "typedoc": "^0.26.0"
   }
 }
