@@ -1,3 +1,11 @@
+// Max v8 require() passes the parent's `module` into required files. This must
+// be a hoisted `var` at the top of any entry file (before imports compile to
+// require), not `const` at the bottom — ES2015+ emit does not hoist `const`.
+
+//eslint-disable-next-line @typescript-eslint/no-unused-vars
+const module = {}
+export = {}
+
 autowatch = 1
 inlets = 1
 outlets = 1
@@ -16,8 +24,3 @@ setinletassist(INLET_FOO, 'Description of Inlet')
 setoutletassist(OUTLET_FOO, 'Description of Outlet')
 
 log('reloaded')
-
-// NOTE: This section must appear in any .ts file that is directuly used by a
-// [js] or [jsui] object so that tsc generates valid JS for Max.
-const module = {}
-export = {}
