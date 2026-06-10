@@ -1,5 +1,5 @@
 export function logFactory({ outputLogs = true }) {
-  function log(_: any) {
+  function log(...args: any[]) {
     post(Array.prototype.slice.call(arguments).join(' '), '\n')
   }
   if (!outputLogs) {
